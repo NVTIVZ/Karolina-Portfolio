@@ -1,13 +1,23 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
+import '@fontsource/raleway/400.css';
+import '@fontsource/open-sans/400.css';
+import '@fontsource/open-sans/700.css';
 
-const colors = {
-  brand: {
-    100: '#1B1717',
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: '#1B1717',
+        color: '#ffffff',
+      },
+    },
   },
-};
-
-const theme = extendTheme({ colors });
+  fonts: {
+    heading: 'Open Sans',
+    body: 'Open Sans',
+  },
+});
 
 function MyApp({ Component, pageProps }) {
   return (
