@@ -3,7 +3,7 @@ import NextImage from 'next/image';
 
 const NavBar = () => {
   return (
-    <Flex as="nav" height={24} alignItems="center" position={'sticky'}>
+    <Flex as="nav" height={24} alignItems="center" position={'sticky'} top="0">
       <Box d="flex" ml={32}>
         <NextImage
           src="/images/logo.png"
