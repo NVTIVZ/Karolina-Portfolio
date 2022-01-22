@@ -3,7 +3,7 @@ import NextImage from 'next/image';
 
 const AboutMe = () => {
   return (
-    <Flex direction={'column'}>
+    <Flex direction={'column'} zIndex={1}>
       <Box mx="auto" mt="12" height="500px" d="flex">
         <Box
           position={'absolute'}
@@ -47,7 +47,7 @@ const AboutMe = () => {
         <Box mx={2}>
           <NextImage src="/images/dn.svg" alt="dn" width={80} height={80} />
         </Box>
-        <Box position={'absolute'} right={10} bottom={-5}>
+        <Box position={'absolute'} right={10}>
           <NextImage
             src="/images/adown.svg"
             alt="adown"
