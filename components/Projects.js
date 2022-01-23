@@ -41,7 +41,7 @@ const projectData = [
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(0);
   return (
-    <Flex flexDirection={'column'} alignItems={'center'} mb={16}>
+    <Flex flexDirection={'column'} alignItems={'center'} mt="16">
       <Heading fontSize={'6xl'} mt="24">
         My Projects
       </Heading>
