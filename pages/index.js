@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Karolina Slawczyk</title>
         <meta name="description" content="Karolina Slawczyk" />
       </Head>
       <NavBar />

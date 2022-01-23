@@ -20,9 +20,14 @@ const Contact = () => {
       mb={12}
       id="contact"
     >
-      <Heading fontSize={'6xl'}>Keep in touch</Heading>
+      <Heading fontSize={['5xl', '5xl', '6xl']}>Keep in touch</Heading>
       <Text mt="6">Please let me know your query.</Text>
-      <FormControl maxW={'450px'} mt={6} d="flex" flexDirection={'column'}>
+      <FormControl
+        maxW={['350px', '450px']}
+        mt={6}
+        d="flex"
+        flexDirection={'column'}
+      >
         <Input placeholder="E-mail" borderRadius={'none'} type={'email'} />
         <Input placeholder="Subject" borderRadius={'none'} mt="3" />
         <Textarea
@@ -49,7 +54,6 @@ const Contact = () => {
           <Link
             href="https://www.linkedin.com/in/karolina-s%C5%82awczyk-b08832227/"
             target="_blank"
-            passHref
             _focus={{ border: 'none', outline: 'none' }}
           >
             <NextImage
@@ -64,7 +68,6 @@ const Contact = () => {
           <Link
             href="mailto:k.slawczyk@gmail.com"
             target="_blank"
-            passHref
             _focus={{ border: 'none', outline: 'none' }}
           >
             <NextImage

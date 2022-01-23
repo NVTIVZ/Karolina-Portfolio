@@ -46,22 +46,22 @@ const Projects = () => {
         My Projects
       </Heading>
       <Box d="flex" alignItems="center">
-        <Box width={32} d="flex" justifyContent={'center'}>
+        <Box width={[16, 16, 32]} d="flex" justifyContent={'center'}>
           <Image
             src="/images/aleft.svg"
             alt="aleft"
-            width={16}
+            width={[8, 8, 16]}
             display={activeProject === 0 ? 'none' : ''}
             onClick={() => setActiveProject(activeProject - 1)}
             cursor={'pointer'}
           />
         </Box>
         <ProjectCard data={projectData[activeProject]} />
-        <Box width={32} d="flex" justifyContent={'center'}>
+        <Box width={[16, 16, 32]} d="flex" justifyContent={'center'}>
           <Image
             src="/images/aright.svg"
             alt="aright"
-            width={16}
+            width={[8, 8, 16]}
             display={activeProject === 2 ? 'none' : ''}
             onClick={() => setActiveProject(activeProject + 1)}
             cursor={'pointer'}

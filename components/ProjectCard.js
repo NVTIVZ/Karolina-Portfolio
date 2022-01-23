@@ -13,8 +13,8 @@ import Link from 'next/link';
 
 const ProjectCard = ({ data }) => {
   return (
-    <Flex mt="16">
-      <Box position={'relative'}>
+    <Flex mt="16" flexDirection={['column', 'column', 'row']}>
+      <Box position={'relative'} mx={[2, 2, 0]}>
         <NextImage src={data.imageUrl} alt="plant" width="721" height="512" />
       </Box>
 
@@ -39,7 +39,7 @@ const ProjectCard = ({ data }) => {
         </List>
         <Box
           ml="auto"
-          mt="auto"
+          mt={['2', '2', 'auto']}
           border="solid 2px white"
           width={56}
           height={14}

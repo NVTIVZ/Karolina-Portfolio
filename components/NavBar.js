@@ -5,23 +5,37 @@ const NavBar = () => {
   return (
     <Flex
       as="nav"
-      height={24}
+      height={[20, 20, 24]}
       alignItems="center"
       position={'sticky'}
       top="0"
       zIndex={99}
       background={'#1B1717'}
+      justifyContent={['center', 'center', 'initial']}
     >
-      <Box d="flex" ml={32}>
+      <Box display={['flex', 'flex', 'none']} fontSize={'xl'}>
+        <Link href="#my-work">Works</Link>
+      </Box>
+      <Box d="flex" ml={[2, 2, 8, 16, 32]} cursor={'pointer'}>
         <NextImage
           src="/images/logo.png"
           alt="logo"
           width="184"
           height="60"
           layout="fixed"
+          onClick={() => window.scrollTo(0, 0)}
         />
       </Box>
-      <Box d="flex" ml="auto" mr={32} fontSize={'2xl'}>
+      <Box display={['flex', 'flex', 'none']} fontSize={'xl'} ml="2">
+        <Link href="#contact">Contact</Link>
+      </Box>
+      <Box
+        d="flex"
+        ml="auto"
+        mr={[2, 2, 8, 16, 32]}
+        fontSize={'2xl'}
+        display={['none', 'none', 'flex']}
+      >
         <Link href="#about-me">About Me</Link>
         <Link href="#my-work" ml={6}>
           My Work
