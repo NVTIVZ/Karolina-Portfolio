@@ -12,6 +12,9 @@ const theme = extendTheme({
         bg: '#1B1717',
         color: '#ffffff',
       },
+      html: {
+        scrollBehavior: 'smooth',
+      },
     },
   },
   fonts: {

@@ -1,9 +1,9 @@
-import { Box, Flex, Heading, Text, Spacer } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import NextImage from 'next/image';
 
 const AboutMe = () => {
   return (
-    <Flex direction={'column'} zIndex={1}>
+    <Flex direction={'column'} zIndex={1} id="about-me">
       <Box mx="auto" mt="12" height="500px" d="flex">
         <Box
           position={'absolute'}
@@ -14,6 +14,33 @@ const AboutMe = () => {
           mx="auto"
           left="0"
           right="0"
+        />
+        <Box
+          position={'absolute'}
+          zIndex={'-2'}
+          mx="auto"
+          left="0"
+          top={340}
+          right="0"
+          width={'700px'}
+          transform={'rotate(0.54turn)'}
+          height={32}
+          borderRadius={'50%'}
+          border={'solid 1px white'}
+        />
+
+        <Box
+          position={'absolute'}
+          zIndex={'-2'}
+          mx="auto"
+          left="0"
+          top={340}
+          right="0"
+          width={'700px'}
+          transform={'rotate(0.56turn)'}
+          height={32}
+          borderRadius={'50%'}
+          border={'solid 1px white'}
         />
         <Heading fontSize={'7xl'} letterSpacing={'normal'} my="auto">
           Hi, I’m Karolina
@@ -46,14 +73,6 @@ const AboutMe = () => {
         </Box>
         <Box mx={2}>
           <NextImage src="/images/dn.svg" alt="dn" width={80} height={80} />
-        </Box>
-        <Box position={'absolute'} right={10}>
-          <NextImage
-            src="/images/adown.svg"
-            alt="adown"
-            width={96}
-            height={96}
-          />
         </Box>
       </Flex>
     </Flex>

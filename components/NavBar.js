@@ -22,9 +22,13 @@ const NavBar = () => {
         />
       </Box>
       <Box d="flex" ml="auto" mr={32} fontSize={'2xl'}>
-        <Link>About Me</Link>
-        <Link ml={6}>My Work</Link>
-        <Link ml={6}>Contact Me</Link>
+        <Link href="#about-me">About Me</Link>
+        <Link href="#my-work" ml={6}>
+          My Work
+        </Link>
+        <Link href="#contact" ml={6}>
+          Contact Me
+        </Link>
       </Box>
     </Flex>
   );
