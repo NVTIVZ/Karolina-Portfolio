@@ -15,7 +15,13 @@ const ProjectCard = ({ data }) => {
   return (
     <Flex mt="16" flexDirection={['column', 'column', 'row']}>
       <Box position={'relative'} mx={[2, 2, 0]}>
-        <NextImage src={data.imageUrl} alt="plant" width="721" height="512" />
+        <NextImage
+          src={data.imageUrl}
+          alt="plant"
+          width="721"
+          height="512"
+          priority="true"
+        />
       </Box>
 
       <Box ml="8" maxW={96} d="flex" flexDirection={'column'}>
@@ -37,19 +43,21 @@ const ProjectCard = ({ data }) => {
             {data.points[2]}
           </ListItem>
         </List>
-        <Box
-          ml="auto"
-          mt={['2', '2', 'auto']}
-          border="solid 2px white"
-          width={56}
-          height={14}
-          fontSize={'2xl'}
-          d="flex"
-          justifyContent={'center'}
-          alignItems={'center'}
-        >
-          <Link href={data.figmaLink}>View in Figma</Link>
-        </Box>
+        <Link href={data.figmaLink} passHref>
+          <Box
+            ml="auto"
+            mt={['2', '2', 'auto']}
+            border="solid 2px white"
+            width={56}
+            height={14}
+            fontSize={'2xl'}
+            d="flex"
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            View in Figma
+          </Box>
+        </Link>
       </Box>
     </Flex>
   );

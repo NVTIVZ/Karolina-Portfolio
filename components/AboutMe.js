@@ -1,10 +1,25 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import NextImage from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 const AboutMe = () => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+    rootMargin: '-500px 0px 0px 0px',
+  });
+
+  console.log(inView);
+
   return (
     <Flex direction={'column'} zIndex={1} id="about-me">
-      <Box mx="auto" mt="12" height={['350px', '350px', '500px']} d="flex">
+      <Box
+        mx="auto"
+        mt="16"
+        height={['350px', '350px', '500px']}
+        d="flex"
+        position={'relative'}
+      >
         <Box
           position={'absolute'}
           zIndex={'-1'}
@@ -20,10 +35,12 @@ const AboutMe = () => {
           zIndex={'-2'}
           mx="auto"
           left="0"
-          top={[290, 290, 340]}
+          top={[150, 150, 200]}
           right="0"
-          width={['370px', '450px', '700px']}
-          transform={'rotate(0.54turn)'}
+          ref={ref}
+          width={['370px', '370px', '580px']}
+          transform={inView ? 'rotate(0.54turn)' : 'rotate(0.53turn)'}
+          transition={'0.5s ease-in-out'}
           height={[16, 16, 32]}
           borderRadius={'50%'}
           border={'solid 1px white'}
@@ -34,14 +51,24 @@ const AboutMe = () => {
           zIndex={'-2'}
           mx="auto"
           left="0"
-          top={[290, 290, 340]}
+          top={[150, 150, 200]}
           right="0"
-          width={['370px', '450px', '700px']}
-          transform={'rotate(0.56turn)'}
+          width={['370px', '370px', '580px']}
+          transform={inView ? 'rotate(0.56turn)' : 'rotate(0.57turn)'}
+          transition={'0.5s ease-in-out'}
           height={[16, 16, 32]}
           borderRadius={'50%'}
           border={'solid 1px white'}
         />
+        <Box position={'absolute'} right={0} top={20}>
+          <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
+        </Box>
+        <Box position={'absolute'} right={10} top={5}>
+          <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
+        </Box>
+        <Box position={'absolute'} left={10} bottom={5}>
+          <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
+        </Box>
         <Heading
           fontSize={['5xl', '5xl', '7xl']}
           letterSpacing={'normal'}

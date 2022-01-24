@@ -51,6 +51,7 @@ const Projects = () => {
             src="/images/aleft.svg"
             alt="aleft"
             width={[8, 8, 16]}
+            height={[8, 8, 16]}
             display={activeProject === 0 ? 'none' : ''}
             onClick={() => setActiveProject(activeProject - 1)}
             cursor={'pointer'}
@@ -62,6 +63,7 @@ const Projects = () => {
             src="/images/aright.svg"
             alt="aright"
             width={[8, 8, 16]}
+            height={[8, 8, 16]}
             display={activeProject === 2 ? 'none' : ''}
             onClick={() => setActiveProject(activeProject + 1)}
             cursor={'pointer'}
