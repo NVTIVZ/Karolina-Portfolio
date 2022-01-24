@@ -10,8 +10,15 @@ import {
   Link,
 } from '@chakra-ui/react';
 import NextImage from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+    rootMargin: '0px 0px -200px 0px',
+  });
+
   return (
     <Flex
       alignItems={'center'}
@@ -78,6 +85,58 @@ const Contact = () => {
             />
           </Link>
         </Box>
+      </Box>
+      <Box
+        position={'absolute'}
+        zIndex={'-1'}
+        bgGradient="radial(50% 50% at 50% 50%, rgba(119, 23, 69, 0.9) 18.23%, rgba(27, 23, 23, 0.9) 82.81%, rgba(27, 23, 23, 0) 99.98%)"
+        height={['350px', '350px', '500px']}
+        width={['350px', '350px', '500px']}
+        left={'-100'}
+        bottom={0}
+      />
+      <Box
+        position={'absolute'}
+        zIndex={'-2'}
+        mx="auto"
+        left="-150"
+        bottom={[150, 150, 200]}
+        ref={ref}
+        width={['370px', '370px', '580px']}
+        transform={inView ? 'rotate(0.44turn)' : 'rotate(0.43turn)'}
+        transition={'0.4s ease-in-out'}
+        height={[16, 16, 32]}
+        borderRadius={'50%'}
+        border={'solid 1px white'}
+      />
+      <Box
+        position={'absolute'}
+        zIndex={'-2'}
+        mx="auto"
+        left="-150"
+        bottom={[150, 150, 200]}
+        width={['370px', '370px', '580px']}
+        transform={inView ? 'rotate(0.46turn)' : 'rotate(0.47turn)'}
+        transition={'0.4s ease-in-out'}
+        height={[16, 16, 32]}
+        borderRadius={'50%'}
+        border={'solid 1px white'}
+      />
+      <Box
+        position={'absolute'}
+        left={inView ? 60 : 270}
+        bottom={inView ? 400 : 900}
+        transition={' 0.7s ease-in-out'}
+      >
+        <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
+      </Box>
+      <Box
+        position={'absolute'}
+        left={inView ? 350 : 400}
+        bottom={inView ? 350 : 800}
+        transition={' 0.7s ease-in-out'}
+      >
+        <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
       </Box>
     </Flex>
   );

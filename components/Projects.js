@@ -1,7 +1,14 @@
-import { Box, Flex, Heading } from '@chakra-ui/react';
-import { useState } from 'react';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Slide,
+  SlideFade,
+  useDisclosure,
+} from '@chakra-ui/react';
+import { useInView } from 'react-intersection-observer';
 import ProjectCard from './ProjectCard';
-import { Image } from '@chakra-ui/react';
 
 const projectData = [
   {
@@ -11,6 +18,7 @@ const projectData = [
       'If your local garden shop had website it can look like this. Simply and classic design but made in modern and trendy way.',
     points: ['Product display', 'Build in chat', 'Product descriptions'],
     figmaLink: '/',
+    right: false,
   },
   {
     title: 'Online clinic',
@@ -23,6 +31,7 @@ const projectData = [
       'Colorful and friendly design',
     ],
     figmaLink: '/',
+    right: true,
   },
   {
     title: 'Music band',
@@ -35,41 +44,28 @@ const projectData = [
       'Extravagant and unusual design',
     ],
     figmaLink: '/',
+    right: false,
   },
 ];
 
 const Projects = () => {
-  const [activeProject, setActiveProject] = useState(0);
   return (
-    <Flex flexDirection={'column'} alignItems={'center'} mt="16" id="my-work">
+    <Flex
+      flexDirection={'column'}
+      alignItems={'center'}
+      mt="16"
+      id="my-work"
+      position={'relative'}
+    >
       <Heading fontSize={'6xl'} mt="24">
         My Projects
       </Heading>
-      <Box d="flex" alignItems="center">
-        <Box width={[16, 16, 32]} d="flex" justifyContent={'center'}>
-          <Image
-            src="/images/aleft.svg"
-            alt="aleft"
-            width={[8, 8, 16]}
-            height={[8, 8, 16]}
-            display={activeProject === 0 ? 'none' : ''}
-            onClick={() => setActiveProject(activeProject - 1)}
-            cursor={'pointer'}
-          />
-        </Box>
-        <ProjectCard data={projectData[activeProject]} />
-        <Box width={[16, 16, 32]} d="flex" justifyContent={'center'}>
-          <Image
-            src="/images/aright.svg"
-            alt="aright"
-            width={[8, 8, 16]}
-            height={[8, 8, 16]}
-            display={activeProject === 2 ? 'none' : ''}
-            onClick={() => setActiveProject(activeProject + 1)}
-            cursor={'pointer'}
-          />
-        </Box>
-      </Box>
+
+      <ProjectCard data={projectData[0]} />
+
+      <ProjectCard data={projectData[1]} />
+
+      <ProjectCard data={projectData[2]} />
     </Flex>
   );
 };

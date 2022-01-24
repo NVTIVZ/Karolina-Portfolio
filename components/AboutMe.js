@@ -40,12 +40,11 @@ const AboutMe = () => {
           ref={ref}
           width={['370px', '370px', '580px']}
           transform={inView ? 'rotate(0.54turn)' : 'rotate(0.53turn)'}
-          transition={'0.5s ease-in-out'}
+          transition={'0.4s ease-in-out'}
           height={[16, 16, 32]}
           borderRadius={'50%'}
           border={'solid 1px white'}
         />
-
         <Box
           position={'absolute'}
           zIndex={'-2'}
@@ -55,7 +54,7 @@ const AboutMe = () => {
           right="0"
           width={['370px', '370px', '580px']}
           transform={inView ? 'rotate(0.56turn)' : 'rotate(0.57turn)'}
-          transition={'0.5s ease-in-out'}
+          transition={'0.4s ease-in-out'}
           height={[16, 16, 32]}
           borderRadius={'50%'}
           border={'solid 1px white'}
