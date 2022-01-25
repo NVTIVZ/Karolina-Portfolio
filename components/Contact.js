@@ -124,8 +124,8 @@ const Contact = () => {
       />
       <Box
         position={'absolute'}
-        left={inView ? 60 : 270}
-        bottom={inView ? 400 : 900}
+        left={inView ? 280 : 270}
+        bottom={inView ? 450 : 900}
         transition={' 0.7s ease-in-out'}
       >
         <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
@@ -133,9 +133,12 @@ const Contact = () => {
       <Box
         position={'absolute'}
         left={inView ? 350 : 400}
-        bottom={inView ? 350 : 800}
+        bottom={inView ? 410 : 800}
         transition={' 0.7s ease-in-out'}
       >
+        <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
+      </Box>
+      <Box position={'absolute'} left={350} bottom={150}>
         <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
       </Box>
     </Flex>

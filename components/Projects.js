@@ -17,7 +17,8 @@ const projectData = [
     description:
       'If your local garden shop had website it can look like this. Simply and classic design but made in modern and trendy way.',
     points: ['Product display', 'Build in chat', 'Product descriptions'],
-    figmaLink: '/',
+    figmaLink:
+      'https://www.figma.com/file/bTV8GWtboFifh1Gvajl1kg/Untitled?node-id=0%3A1',
     right: false,
   },
   {
@@ -30,7 +31,8 @@ const projectData = [
       'Regestration option',
       'Colorful and friendly design',
     ],
-    figmaLink: '/',
+    figmaLink:
+      'https://www.figma.com/file/7Lscu3IvL2Jua087ETse9k/Untitled?node-id=0%3A1',
     right: true,
   },
   {
@@ -43,7 +45,8 @@ const projectData = [
       'Night mode',
       'Extravagant and unusual design',
     ],
-    figmaLink: '/',
+    figmaLink:
+      'https://www.figma.com/file/qHIppSjvXC0YcHcT64gprc/Untitled?node-id=0%3A1',
     right: false,
   },
 ];

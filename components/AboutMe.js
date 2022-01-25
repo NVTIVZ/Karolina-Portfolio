@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Fade, Flex, Heading, Text } from '@chakra-ui/react';
 import NextImage from 'next/image';
 import { useInView } from 'react-intersection-observer';
 
@@ -68,44 +68,57 @@ const AboutMe = () => {
         <Box position={'absolute'} left={10} bottom={5}>
           <NextImage src="/images/star.svg" alt="star" width={64} height={64} />
         </Box>
-        <Heading
-          fontSize={['5xl', '5xl', '7xl']}
-          letterSpacing={'normal'}
-          my="auto"
-        >
-          Hi, I’m Karolina
-        </Heading>
+        <Box my="auto">
+          <Fade in={true} transition={{ enter: { delay: 0.3, duration: 0.5 } }}>
+            <Heading fontSize={['5xl', '5xl', '7xl']} letterSpacing={'normal'}>
+              Hi, I’m Karolina
+            </Heading>
+          </Fade>
+        </Box>
       </Box>
 
       <Box mx={'auto'} maxW="650px" mt={6} d="flex">
-        <Text fontSize={'2xl'} fontWeight="300" mx="3">
-          I’m self-taught UI/UX graphic designer from Wrocław who took liking in
-          making pleasant for eye websites and apps.
-        </Text>
+        <Fade in={true} transition={{ enter: { delay: 0.5, duration: 0.5 } }}>
+          <Text fontSize={'2xl'} fontWeight="300" mx="3">
+            I’m self-taught UI/UX graphic designer from Wrocław who took liking
+            in making pleasant for eye websites and apps.
+          </Text>
+        </Fade>
       </Box>
       <Box mx={'auto'} mt={16}>
-        <Heading fontSize={'2xl'}>What can i work with</Heading>
+        <Fade in={true} transition={{ enter: { delay: 0.7, duration: 0.5 } }}>
+          <Heading fontSize={'2xl'}>What can i work with</Heading>
+        </Fade>
       </Box>
 
-      <Flex mx={'auto'} mt={8} flexWrap={'wrap'} justifyContent={'center'}>
-        <Box mx={2}>
-          <NextImage src="/images/ps.svg" alt="ps" width={80} height={80} />
-        </Box>
-        <Box mx={2}>
-          <NextImage src="/images/Id.svg" alt="Id" width={80} height={80} />
-        </Box>
-        <Box mx={2}>
-          <NextImage src="/images/Ai.svg" alt="Ai" width={80} height={80} />
-        </Box>
-        <Box mx={2}>
-          <NextImage src="/images/Xd.svg" alt="Xd" width={80} height={80} />
-        </Box>
-        <Box mx={2}>
-          <NextImage src="/images/bl.svg" alt="bl" width={80} height={80} />
-        </Box>
-        <Box mx={2}>
-          <NextImage src="/images/dn.svg" alt="dn" width={80} height={80} />
-        </Box>
+      <Flex mx={'auto'} mt={8}>
+        <Fade in={true} transition={{ enter: { delay: 1, duration: 0.5 } }}>
+          <Flex flexWrap={'wrap'} justifyContent={'center'}>
+            <Box mx={2}>
+              <NextImage src="/images/ps.svg" alt="ps" width={80} height={80} />
+            </Box>
+            <Box mx={2}>
+              <NextImage src="/images/Id.svg" alt="Id" width={80} height={80} />
+            </Box>
+            <Box mx={2}>
+              <NextImage src="/images/Ai.svg" alt="Ai" width={80} height={80} />
+            </Box>
+            <Box mx={2}>
+              <NextImage src="/images/Xd.svg" alt="Xd" width={80} height={80} />
+            </Box>
+            <Box mx={2}>
+              <NextImage src="/images/bl.svg" alt="bl" width={80} height={80} />
+            </Box>
+            <Box mx={2}>
+              <NextImage
+                src="/images/Figma-logo.svg"
+                alt="fm"
+                width={80}
+                height={80}
+              />
+            </Box>
+          </Flex>
+        </Fade>
       </Flex>
     </Flex>
   );
