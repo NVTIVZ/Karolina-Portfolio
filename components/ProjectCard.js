@@ -52,7 +52,7 @@ const ProjectCard = ({ data }) => {
 
           <Box
             ml="8"
-            maxW={96}
+            maxW={[96, 96, 64, 96]}
             d="flex"
             flexDirection={'column'}
             mx={['auto', 'auto', 2]}
@@ -61,7 +61,7 @@ const ProjectCard = ({ data }) => {
               in={inView}
               transition={{ enter: { delay: 0.2, duration: 0.3 } }}
             >
-              <Heading fontSize={'5xl'} ref={ref}>
+              <Heading fontSize={['4x', '4xl', '4xl', '5xl']} ref={ref}>
                 {data.title}
               </Heading>
             </Fade>
@@ -69,7 +69,12 @@ const ProjectCard = ({ data }) => {
               in={inView}
               transition={{ enter: { delay: 0.4, duration: 0.3 } }}
             >
-              <Text mt="8" fontSize={['xl', '2xl']} fontWeight={300} ref={ref}>
+              <Text
+                mt={[3, 3, 3, 8]}
+                fontSize={['lg', 'lg', 'lg', '2xl']}
+                fontWeight={300}
+                ref={ref}
+              >
                 {data.description}
               </Text>
             </Fade>
@@ -77,7 +82,12 @@ const ProjectCard = ({ data }) => {
               in={inView}
               transition={{ enter: { delay: 0.6, duration: 0.3 } }}
             >
-              <List spacing={2} mt="8" fontSize={'xl'} ref={ref}>
+              <List
+                spacing={[1, 1, 1, 2]}
+                mt={[3, 3, 3, 8]}
+                fontSize={['md', 'md', 'md', 'xl']}
+                ref={ref}
+              >
                 <ListItem>
                   <ListIcon
                     as={MdCheckCircle}
@@ -116,9 +126,9 @@ const ProjectCard = ({ data }) => {
                   <Button
                     ml="auto"
                     border="solid 2px white"
-                    width={56}
-                    height={14}
-                    fontSize={'2xl'}
+                    width={[40, 40, 40, 56]}
+                    height={[10, 10, 10, 14]}
+                    fontSize={['xl', 'xl', 'xl', '2xl']}
                     d="flex"
                     justifyContent={'center'}
                     alignItems={'center'}
