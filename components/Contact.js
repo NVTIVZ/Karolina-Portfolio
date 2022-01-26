@@ -34,6 +34,9 @@ const Contact = () => {
         mt={6}
         d="flex"
         flexDirection={'column'}
+        name="contact"
+        method="POST"
+        data-netlify="true"
       >
         <Input placeholder="E-mail" borderRadius={'none'} type={'email'} />
         <Input placeholder="Subject" borderRadius={'none'} mt="3" />
