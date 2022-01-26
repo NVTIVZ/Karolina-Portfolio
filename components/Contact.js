@@ -33,9 +33,16 @@ const Contact = () => {
         {' '}
         <form name="contact" method="POST" data-netlify="true">
           <Input placeholder="E-mail" borderRadius={'none'} type={'email'} />
-          <Input placeholder="Subject" borderRadius={'none'} mt="3" />
+          <Input
+            placeholder="Subject"
+            borderRadius={'none'}
+            mt="3"
+            name="subject"
+            type={'text'}
+          />
           <Textarea
             placeholder="Enter text"
+            name="message"
             borderRadius={'none'}
             resize={'none'}
             mt="3"
