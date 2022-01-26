@@ -29,36 +29,34 @@ const Contact = () => {
     >
       <Heading fontSize={['5xl', '5xl', '6xl']}>Keep in touch</Heading>
       <Text mt="6">Please let me know your query.</Text>
-      <FormControl
-        maxW={['350px', '450px']}
-        mt={6}
-        d="flex"
-        flexDirection={'column'}
-        name="contact"
-        method="POST"
-        data-netlify="true"
-      >
-        <Input placeholder="E-mail" borderRadius={'none'} type={'email'} />
-        <Input placeholder="Subject" borderRadius={'none'} mt="3" />
-        <Textarea
-          placeholder="Enter text"
-          borderRadius={'none'}
-          resize={'none'}
-          mt="3"
-          height={32}
-        />
-        <Button
-          type="submit"
-          borderRadius={'none'}
-          background={'transparent'}
-          border={'solid 2px white'}
-          ml="auto"
-          mt="3"
-          _hover={{ background: 'transparent' }}
-        >
-          Submit
-        </Button>
-      </FormControl>
+      <Box maxW={['350px', '450px']} mt={6}>
+        {' '}
+        <form name="contact" method="POST" data-netlify="true">
+          <Input placeholder="E-mail" borderRadius={'none'} type={'email'} />
+          <Input placeholder="Subject" borderRadius={'none'} mt="3" />
+          <Textarea
+            placeholder="Enter text"
+            borderRadius={'none'}
+            resize={'none'}
+            mt="3"
+            height={32}
+          />
+          <Box d={'flex'}>
+            <Button
+              type="submit"
+              borderRadius={'none'}
+              background={'transparent'}
+              border={'solid 2px white'}
+              ml="auto"
+              mt="3"
+              _hover={{ background: 'rgba(255,255,255,0.1)' }}
+            >
+              Submit
+            </Button>
+          </Box>
+        </form>
+      </Box>
+
       <Box mt="8" d="flex">
         <Box mx="12">
           <Link
