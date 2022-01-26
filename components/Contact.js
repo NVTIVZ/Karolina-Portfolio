@@ -33,6 +33,7 @@ const Contact = () => {
         {' '}
         <form name="contact" method="POST" data-netlify="true">
           <Input placeholder="E-mail" borderRadius={'none'} type={'email'} />
+          <input type="hidden" name="form-name" value="contact" />
           <Input
             placeholder="Subject"
             borderRadius={'none'}
