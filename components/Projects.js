@@ -40,8 +40,7 @@ const projectData = [
       "Starting being fit isn’t always easy. There is a lot of different apps that can help you, but often they lack diversity and they require basic knowledge about topic. You need to know at advance if you need to download yoga, meditation, or relaxation music app.",
     solution:
       "Creating an application that will be begginer friendly, with detailed descriptions of exercises and will combine the aspects of yoga, meditation, relaxation music without the need to download many applications.\n",
-    figmaLink:
-      "https://www.figma.com/file/qHIppSjvXC0YcHcT64gprc/Untitled?node-id=0%3A1",
+    figmaLink: "https://www.figma.com/file/IdUKnGGENnIl7TCPihnYLj/Silent-Mode",
     right: false,
   },
   {
